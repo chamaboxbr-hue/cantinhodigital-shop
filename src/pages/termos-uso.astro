@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../data/siteConfig';
+---
+
+<Layout
+  title={`Termos de Uso | ${siteConfig.name}`}
+  description="Leia nossos termos de uso para entender as regras do serviço do Cantinho Digital."
+  canonical={`${siteConfig.url}/termos-uso/`}
+>
+  <div class="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
+    <header class="bg-slate-950/80 backdrop-blur-lg border-b border-purple-500/20 py-4">
+      <div class="container mx-auto px-6 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/logo.png" alt="Cantinho Digital" width="36" height="36" class="rounded-lg" />
+          <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            {siteConfig.name}
+          </span>
+        </a>
+        <a href="/" class="text-sm font-semibold text-gray-300 hover:text-white transition">← Voltar ao Início</a>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 max-w-4xl">
+      <h1 class="text-4xl md:text-5xl font-black mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Termos de Uso
+      </h1>
+
+      <div class="space-y-6 text-gray-300">
+        <section class="bg-slate-900/50 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-4">1. Descrição do Serviço</h2>
+          <p class="leading-relaxed">Disponibilizamos planos de transmissão IPTV com acesso a canais ao vivo, filmes, séries e esportes em alta resolução para até 3 telas simultâneas.</p>
+        </section>
+
+        <section class="bg-slate-900/50 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-4">2. Pagamento e Sem Renovação Forçada</h2>
+          <p class="leading-relaxed">Nossos planos são pré-pagos sem renovação automática no cartão de crédito. Você só renova quando desejar.</p>
+        </section>
+
+        <section class="bg-slate-900/50 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-4">3. Suporte</h2>
+          <p class="leading-relaxed">Dúvidas e suporte técnico são atendidos diretamente pelo WhatsApp oficial: {siteConfig.whatsapp.display}.</p>
+        </section>
+
+        <p class="text-sm text-gray-500 pt-4">Última atualização: Fevereiro de 2026</p>
+      </div>
+
+      <div class="mt-12">
+        <a href="/" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 text-white">
+          ← Voltar ao Início
+        </a>
+      </div>
+    </main>
+  </div>
+</Layout>
